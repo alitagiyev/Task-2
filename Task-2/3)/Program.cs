@@ -17,6 +17,7 @@ namespace _3_
             Console.Write("9 reqemli ededi daxil edin: ");
           
             if (!int.TryParse(Console.ReadLine(),out int a)|| a<99999999 || a>1000000000) 
+                 
             {
                 goto l1;
             }
