@@ -12,13 +12,24 @@
         l1:
             Console.Write("5 reqemli eded daxil edin: ");
 
-            if (!int.TryParse(Console.ReadLine(), out int a) || a < 9999 || a > 100000)
-            {
+            int a ;
 
+
+            if (!int.TryParse(Console.ReadLine(), out  a) || a < 9999 || a > 100000)
+            {
+                
                 goto l1;
+
+                int x = x / 1000;
+                int b = b % 10;
+                int c = a + b;
+                double z= Math.Pow(c,2);
+
+
+
             }
 
-         
+             Console.WriteLine(a);
         }
     }
 }
