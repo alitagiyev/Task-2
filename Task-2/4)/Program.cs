@@ -11,25 +11,27 @@
          */
         l1:
             Console.Write("5 reqemli eded daxil edin: ");
+            string number = Console.ReadLine();
+            int a;
 
-            int a ;
-
-
-            if (!int.TryParse(Console.ReadLine(), out  a) || a < 9999 || a > 100000)
+            if (!int.TryParse(number, out a))
             {
-                
                 goto l1;
+            }
+            int len = (int)Math.Log10(a) + 1;
 
-                int x = x / 1000;
-                int b = b % 10;
-                int c = a + b;
-                double z= Math.Pow(c,2);
-
-
-
+            if (len != 5)
+            { 
+                goto l1;    
             }
 
-             Console.WriteLine(a);
+            int x = a / 10000;
+            int y = a % 10;
+            int z = x + y;
+            double f =Math.Pow(z, 2);   
+
+           Console.WriteLine(f);
         }
+
     }
 }
