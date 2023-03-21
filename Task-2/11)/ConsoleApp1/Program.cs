@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp1
+﻿using System.Runtime.ConstrainedExecution;
+using System.Threading.Channels;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -16,7 +19,12 @@
                 cem = cem +(number%100);
                 number /= 100;
             }
-            Console.WriteLine($"{cem}99");
+
+            cem = cem * 100 + 99;
+            double cavab = cem * 0.82;
+            Console.WriteLine(cavab);
         }
+       
     }
+
 }
